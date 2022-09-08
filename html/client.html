@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <title>Rock Paper Scissers game client</title>
+    <meta charset="utf-8">
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="client.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <body>
+        <div id="top">
+            <div id="tools">
+                <h1>Rock Paper Scissers game client</h1>
+                <div>
+                    <h2>REST server settings</h2>
+                    <div class="input-line">
+                        <label for="url">URL:</label>
+                        <input type="text" name="url" id="url" value="http://localhost:8080">
+                    </div>
+                    <h2>Player ID</h2>
+                    <div class="input-line">
+                        <label for="player_id">PlayerID:</label>
+                        <input type="text" name="player_id" id="player_id" value="">
+                        <input type="button" id="join" name="Join" value="Join" onclick="onJoin()">
+                    </div>
+                </div>
+                <div>
+                    <h2>Make your move</h2>
+                    <form name="moving">
+                        <div>
+                            <input type="radio" name="movetype" value="Rock" id="Rock" checked>
+                            <label for="datagram">Rock</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="movetype" value="Paper" id="Paper">
+                            <label for="Paper">Paper</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="movetype" value="Scissers" id="Scissers">
+                            <label for="Scissers">Scissers</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="movetype" value="Lizard" id="Lizard">
+                            <label for="Lizard">Lizard</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="movetype" value="Spock" id="Spock">
+                            <label for="Spock">Spock</label>
+                        </div>
+                        <input type="button" id="move" name="move" value="move" onclick="onMove()">
+                    </form>
+                </div>
+                <div>
+                    <h2>Event log</h2>
+                    <ul id="rank-table">
+                    </ul>
+                    <input type="button" value="Get rank" onclick="onRank()">
+                </div>
+                <div>
+                    <h2>Event log</h2>
+                    <ul id="event-log">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
